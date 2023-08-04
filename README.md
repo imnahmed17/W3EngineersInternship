@@ -2,7 +2,7 @@
 A webpage containing navbar and some room cards
 
 ## Live Link
-Hosted in Netlify -> [BedroomVillas]()
+Hosted in Netlify -> [BedroomVillas](https://tubular-melomakarona-fd7490.netlify.app/)
 
 ## Features
 * navbar with menu icon, logo, input fields and button
