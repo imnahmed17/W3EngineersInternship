@@ -12,27 +12,37 @@
 <body class="max-w-7xl mx-auto">
     <section class="my-3">
         <div class="px-2 flex gap-1">
-            <div class="w-1/4 px-1 py-2 flex border-2 focus-within:border-blue-400">
+            <div class="w-1/5 md:w-1/4 px-1 py-2 flex border-2 focus-within:border-blue-400">
                 <i class="fi fi-br-search flex items-center text-slate-400"></i>
-                <input type="text" name="search" id="search" placeholder="Texas, USA" class="ml-2 outline-none">
+                <input type="text" name="search" id="search" placeholder="Texas, USA" class="ml-2 w-full outline-none">
             </div>
-            <div class="w-35 px-1 py-2 flex border-2 focus-within:border-blue-400">
+            <div class="w-2/5 md:w-35 px-1 py-2 flex border-2 focus-within:border-blue-400">
                 <i class="fi fi-rs-calendar flex items-center text-cyan-500"></i>
-                <input type="text" name="checkIn" id="checkIn" placeholder="Check In" class="ml-3 outline-none">
-                <i class="fi fi-rr-angle-right flex items-center text-slate-400"></i>
-                <input type="text" name="checkOut" id="checkOut" placeholder="Check Out" class="ml-3 outline-none">
+                <input type="text" name="checkIn" id="checkIn" placeholder="Check In" class="ml-3 w-5/12 outline-none hidden md:block">
+                <input type="text" name="checkIn" id="checkIn" placeholder="In" class="ml-2 w-full outline-none md:hidden">
+                <i class="fi fi-rr-angle-right mx-1 md:mx-5 flex items-center text-slate-400"></i>
+                <input type="text" name="checkOut" id="checkOut" placeholder="Check Out" class="w-5/12 outline-none hidden md:block">
+                <input type="text" name="checkOut" id="checkOut" placeholder="Out" class="w-full outline-none md:hidden">
             </div>
             <div class="w-1/5">
                 <button class="w-full h-full border-2 px-1 flex items-center text-slate-400 focus:border-blue-400">
-                    <i class="fi fi-rs-users flex items-center"></i>
-                    <span class="ml-2">Guests</span>
-                    <i class="fi fi-rr-angle-down flex flex-end items-center"></i>
+                    <span class="hidden md:block">
+                        <i class="fi fi-rs-users flex items-center"></i>
+                    </span>
+                    <span class="md:ml-2 w-full md:w-3/4 md:text-left">Guests</span>
+                    <span class="hidden md:block">
+                        <i class="fi fi-rr-angle-down flex items-center"></i>
+                    </span>
                 </button>
             </div>
             <div class="w-1/5">
-                <button class="w-full h-full border-2 px-1 text-slate-400 focus:border-blue-400">Price Range</button>
+                <button class="w-full h-full border-2 px-1 flex justify-between items-center text-slate-400 focus:border-blue-400">
+                    <span class="w-full md:w-5/6 md:text-left">Price Range</span>
+                    <span class="hidden md:block">
+                        <i class="fi fi-rr-angle-down flex items-center"></i>
+                    </span>
+                </button>
             </div>
-        </div>
     </section>
 </body>
 </html>
