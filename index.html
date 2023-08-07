@@ -8,6 +8,8 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link rel="stylesheet" href="css/selectDate.css">
     <title>Task 02</title>
 </head>
 <body class="max-w-7xl mx-auto">
@@ -19,11 +21,11 @@
             </div>
             <div class="w-2/5 md:w-[35%] px-1 py-2 flex border-2 focus-within:border-blue-400">
                 <i class="fi fi-rs-calendar flex items-center text-cyan-500"></i>
-                <input type="text" name="checkIn" id="checkIn" placeholder="Check In" class="ml-3 w-5/12 outline-none hidden md:block">
-                <input type="text" name="checkIn" id="checkIn" placeholder="In" class="ml-2 w-full outline-none md:hidden">
+                <input type="text" name="checkIn" id="checkInMd" placeholder="Check In" class="ml-3 w-5/12 outline-none hidden md:block" autocomplete="off">
+                <input type="text" name="checkIn" id="checkInSm" placeholder="In" class="ml-2 w-full outline-none md:hidden" autocomplete="off">
                 <i class="fi fi-rr-angle-right mx-1 md:mx-5 flex items-center text-slate-400"></i>
-                <input type="text" name="checkOut" id="checkOut" placeholder="Check Out" class="w-5/12 outline-none hidden md:block">
-                <input type="text" name="checkOut" id="checkOut" placeholder="Out" class="w-full outline-none md:hidden">
+                <input type="text" name="checkOut" id="checkOutMd" placeholder="Check Out" class="w-5/12 outline-none hidden md:block" autocomplete="off">
+                <input type="text" name="checkOut" id="checkOutSm" placeholder="Out" class="w-full outline-none md:hidden" autocomplete="off">
             </div>
             <div class="w-1/5">
                 <button class="w-full h-full border-2 px-1 flex items-center text-slate-400 focus:border-blue-400">
@@ -51,6 +53,8 @@
             </ul>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="js/searchCity.js"></script>
+    <script src="js/selectDate.js"></script>
 </body>
 </html>
