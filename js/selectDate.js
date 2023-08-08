@@ -1,16 +1,14 @@
-const checkInMd = document.getElementById('checkInMd');
-const checkInSm = document.getElementById('checkInSm');
-const checkOutMd = document.getElementById('checkOutMd');
-const checkOutSm = document.getElementById('checkOutSm');
+const checkIn = document.getElementById('checkIn');
+const checkOut = document.getElementById('checkOut');
 
 var picker1 = new Pikaday({
-    field: checkInMd,
+    field: checkIn,
     format: 'YYYY-MM-DD',
     toString(date, format) {
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-        return `${year}-${month < 10 ? `0${month}` : month}-${day}`;
+        return `${year}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`;
     },
     onSelect: function() {
         console.log(this.getMoment().format('Do MMMM YYYY'));
@@ -18,41 +16,13 @@ var picker1 = new Pikaday({
 });
 
 var picker2 = new Pikaday({
-    field: checkInSm,
+    field: checkOut,
     format: 'YYYY-MM-DD',
     toString(date, format) {
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
-        return `${year}-${month < 10 ? `0${month}` : month}-${day}`;
-    },
-    onSelect: function() {
-        console.log(this.getMoment().format('Do MMMM YYYY'));
-    }
-});
-
-var picker3 = new Pikaday({
-    field: checkOutMd,
-    format: 'YYYY-MM-DD',
-    toString(date, format) {
-        const day = date.getDate();
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
-        return `${year}-${month < 10 ? `0${month}` : month}-${day}`;
-    },
-    onSelect: function() {
-        console.log(this.getMoment().format('Do MMMM YYYY'));
-    }
-});
-
-var picker4 = new Pikaday({
-    field: checkOutSm,
-    format: 'YYYY-MM-DD',
-    toString(date, format) {
-        const day = date.getDate();
-        const month = date.getMonth() + 1;
-        const year = date.getFullYear();
-        return `${year}-${month < 10 ? `0${month}` : month}-${day}`;
+        return `${year}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`;
     },
     onSelect: function() {
         console.log(this.getMoment().format('Do MMMM YYYY'));
