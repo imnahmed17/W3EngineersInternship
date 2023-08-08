@@ -7,7 +7,8 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-    <link rel="stylesheet" href="css/selectDate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
     <title>Task 02</title>
 </head>
 <body class="max-w-7xl mx-auto">
@@ -56,10 +57,25 @@
                 </div>
             </div>
         </div>
+        <div class="px-6 pt-3 pb-2 lg:w-[35%] border">
+            <p>Price Range: <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>128749+ per night</p>
+            <div class="pt-14">
+                <div id="slider"></div>
+            </div>
+            <div class="mt-8 flex justify-end">
+                <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn1">Apply</button>
+            </div>
+        </div>
+        <div class="px-2 py-4" id="resultDiv">
+            
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/searchCity.js"></script>
     <script src="js/selectDate.js"></script>
     <script src="js/guestCount.js"></script>
+    <script src="js/priceRange.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
