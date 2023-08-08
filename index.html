@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="css/selectDate.css">
     <title>Task 02</title>
@@ -17,7 +15,7 @@
         <div class="px-2 flex flex-col md:flex-row gap-1">
             <div class="md:w-3/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
                 <i class="fi fi-rr-search flex items-center text-slate-400"></i>
-                <input type="text" name="search" id="search" placeholder="Texas, USA" class="ml-2 w-full outline-none">
+                <input type="text" name="search" id="search" placeholder="Texas, USA" class="ml-2 w-full outline-none" autocomplete="off">
             </div>
             <div class="md:w-4/12 h-12 px-1 py-2 flex gap-1 border-2 focus-within:border-blue-400">
                 <i class="fi fi-rs-calendar flex items-center text-cyan-500"></i>
@@ -27,25 +25,41 @@
             </div>
             <div class="md:w-2/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
                 <i class="fi fi-rs-users flex items-center text-slate-400"></i>
-                <input type="text" name="guests" id="guests" placeholder="Guests" class="ml-2 w-full outline-none">
-                <i class="fi fi-rr-angle-down flex items-center text-slate-400"></i>
+                <input type="text" name="guests" id="guests" placeholder="Guests" class="ml-2 w-full outline-none" autocomplete="off">
+                <i class="fi fi-rr-angle-down flex items-center text-slate-400" id="downArrow1"></i>
             </div>
-            <div class="md:w-2/12 h-12">
-                <button class="w-full h-full border-2 px-1 flex justify-between items-center text-slate-400 focus:border-blue-400">
-                    <span>Price Range</span>
-                    <i class="fi fi-rr-angle-down flex items-center"></i>
-                </button>
+            <div class="md:w-2/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
+                <input type="text" name="priceRange" id="priceRange" placeholder="Price Range" class="w-full outline-none" autocomplete="off">
+                <i class="fi fi-rr-angle-down flex items-center text-slate-400" id="downArrow2"></i>
             </div>
-            <button class="bg-orange-400 text-white px-2 md:w-1/12 h-12">Search</button>
+            <button class="bg-orange-400 text-white px-2 md:w-1/12 h-12" id="searchBtn">Search</button>
         </div>
         <div class="px-2 w-full absolute top-14">
             <ul id="cityList" class="mt-0 w-full md:w-[21.2%] bg-white border hidden">
         
             </ul>
         </div>
+        <div class="px-2 w-full md:w-[30%] lg:w-[17%] hidden absolute top-40 md:top-14 md:left-[45%] md:right-[45%] lg:left-[50.3%] lg:right-[50.3%]" id="guestDiv">
+            <div class="px-2 pt-6 bg-white border">
+                <div class="flex justify-between items-center">
+                    <h3>Guests</h3>
+                    <button class="text-orange-400 rounded-full border-2 border-orange-400 h-10 w-10 text-2xl" id="minusBtn">
+                        <i class="fi fi-rs-minus-small flex justify-center items-start"></i>
+                    </button>
+                    <h3 id="textValue"></h3>
+                    <button class="text-orange-400 rounded-full border-2 border-orange-400 h-10 w-10 text-2xl" id="plusBtn">
+                        <i class="fi fi-rs-plus-small flex justify-center items-start"></i>
+                    </button>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn">Apply</button>
+                </div>
+            </div>
+        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="js/searchCity.js"></script>
     <script src="js/selectDate.js"></script>
+    <script src="js/guestCount.js"></script>
 </body>
 </html>

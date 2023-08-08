@@ -20,7 +20,7 @@ fetch('./data/city.json')
 
                 li.innerText = city;
                 li.classList.add('px-2', 'py-2', 'cursor-pointer', 'hover:bg-blue-100', 'flex', 'items-center');
-                icon.classList.add('fi', 'fi-sr-marker', 'mr-2', 'text-blue-400', 'flex', 'items-center');
+                icon.classList.add('fi', 'fi-rr-marker', 'mr-2', 'text-blue-400', 'flex', 'items-center');
 
                 li.prepend(icon);
                 cityList.appendChild(li);
