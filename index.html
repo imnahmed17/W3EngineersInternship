@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="css/style.css">
     <title>Task 02</title>
 </head>
@@ -35,13 +36,15 @@
             </div>
             <button class="bg-orange-400 text-white px-2 md:w-1/12 h-12" id="searchBtn">Search</button>
         </div>
+        <!-- city list -->
         <div class="px-2 w-full absolute top-14">
-            <ul id="cityList" class="mt-0 w-full md:w-[21.2%] bg-white border hidden">
+            <ul id="cityList" class="mt-0 w-full md:w-[24.5%] lg:w-[17%] bg-white border hidden">
         
             </ul>
         </div>
-        <div class="px-2 w-full md:w-[30%] lg:w-[17%] hidden absolute top-40 md:top-14 md:left-[45%] md:right-[45%] lg:left-[50.3%] lg:right-[50.3%]" id="guestDiv">
-            <div class="px-2 pt-6 bg-white border">
+        <!-- guest count -->
+        <div class="px-2 w-full md:w-[30%] lg:w-[18%] hidden absolute top-40 md:top-14 md:left-[45%] md:right-[45%] lg:left-[49.3%] lg:right-[49.3%]" id="guestDiv">
+            <div class="px-3 pt-6 pb-2 bg-white border">
                 <div class="flex justify-between items-center">
                     <h3>Guests</h3>
                     <button class="text-orange-400 rounded-full border-2 border-orange-400 h-10 w-10 text-2xl" id="minusBtn">
@@ -57,25 +60,37 @@
                 </div>
             </div>
         </div>
-        <div class="px-6 pt-3 pb-2 lg:w-[35%] border">
-            <p>Price Range: <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>128749+ per night</p>
-            <div class="pt-14">
-                <div id="slider"></div>
-            </div>
-            <div class="mt-8 flex justify-end">
-                <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn1">Apply</button>
+        <!-- price range -->
+        <div class="px-2 w-full md:w-[40%] lg:w-[22%] hidden absolute top-[213px] md:top-14 md:left-[51.4%] md:right-[51.4%] lg:left-[56.8%] lg:right-[56.8%]" id="priceRangeDiv">
+            <div class="px-6 pt-3 pb-2 bg-white border">
+                <p>Price Range: <span class="text-yellow-400"><i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>7749+ per night</span></p>
+                <div class="pt-14 px-4">
+                    <div id="slider"></div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn1">Apply</button>
+                </div>
             </div>
         </div>
+        <!-- search result  -->
         <div class="px-2 py-4" id="resultDiv">
             
         </div>
     </section>
+    <section>
+        <div class="px-2">
+            <div id="map" class="px-2 border"></div>
+            <button id="showMapBtn" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white py-2 px-4 rounded">Show Map</button>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/searchCity.js"></script>
     <script src="js/selectDate.js"></script>
     <script src="js/guestCount.js"></script>
     <script src="js/priceRange.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/showMap.js"></script>
 </body>
 </html>

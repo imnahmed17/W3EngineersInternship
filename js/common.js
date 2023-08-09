@@ -1,4 +1,3 @@
-const priceRange = document.getElementById("priceRange");
 const searchBtn = document.getElementById("searchBtn");
 const resultDiv = document.getElementById("resultDiv");
 

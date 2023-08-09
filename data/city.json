@@ -1,34 +1,54 @@
 {
     "cities": [
-        "Ashbourne, Ireland",
-        "Asheboro, USA",
-        "Ashford, UK",
-        "Ashikaga, Japan",
-        "Ashland, USA",
-        "Fahai, China",
-        "Faher, Yemen",
-        "Fahraj, Iran",
-        "Fahs, Tunisia",
-        "Fahud, Oman",
-        "Habach, Germany",
-        "Habiganj, Bangladesh",
-        "Habikino, Japan",
-        "Habo, Sweden",
-        "Habur, Turkey",
-        "Hawaii, USA",
-        "Hawarden, UK",
-        "Hawes, UK",
-        "Hawkwood, Canada",
-        "Hawthorne, CA, USA",
-        "Nom Pen, Cambodia",
-        "Nombela, Spain",
-        "Nome, USA",
-        "Nomi, Japan",
-        "Nomós Achaḯas, Greece",
-        "Taraba, Nigeria",
-        "Taranto, Italy",
-        "Taraz, Kazakhstan",
-        "Tarsus, Turkey",
-        "Tartu, Estonia"
+        {
+            "name": "Hawaii, USA",
+            "latitude": 19.8987,
+            "longitude": 155.6659
+        },
+        {
+            "name": "Hawarden, UK",
+            "latitude": 53.1857,
+            "longitude": 3.0298
+        },
+        {
+            "name": "Hawes, UK",
+            "latitude": 54.3038,
+            "longitude": 2.1969
+        },
+        {
+            "name": "Hawkwood, Canada",
+            "latitude": 51.1323,
+            "longitude": 114.1775
+        },
+        {
+            "name": "Hawthorne, CA, USA",
+            "latitude": 33.9164,
+            "longitude": 118.3526
+        },
+        {
+            "name": "Nom Pen, Cambodia",
+            "latitude": 11.55784,
+            "longitude": 104.90735
+        },
+        {
+            "name": "Nombela, Spain",
+            "latitude": 40.15635,
+            "longitude": -4.50338
+        },
+        {
+            "name": "Nome, USA",
+            "latitude": 64.50026,
+            "longitude": -165.40635
+        },
+        {
+            "name": "Nomi, Japan",
+            "latitude": 36.43780,
+            "longitude": 136.54483
+        },
+        {
+            "name": "Nomós Achaḯas, Greece",
+            "latitude": 37.95024,
+            "longitude": 21.76175
+        }
     ]
 }

@@ -10,7 +10,7 @@ fetch('./data/city.json')
         const inputText = this.value.trim().toLowerCase();
 
         if (inputText.length >= 3) {
-            const filteredCities = cities.filter((city) => city.toLowerCase().includes(inputText));
+            const filteredCities = cities.filter((city) => city.name.toLowerCase().includes(inputText));
             cityList.innerHTML = '';
 
             filteredCities.forEach((city) => {
@@ -18,7 +18,7 @@ fetch('./data/city.json')
                 const hr = document.createElement('hr');
                 const icon = document.createElement('i');
 
-                li.innerText = city;
+                li.innerText = city.name;
                 li.classList.add('px-2', 'py-2', 'cursor-pointer', 'hover:bg-blue-100', 'flex', 'items-center');
                 icon.classList.add('fi', 'fi-rr-marker', 'mr-2', 'text-blue-400', 'flex', 'items-center');
 
