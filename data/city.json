@@ -2,28 +2,28 @@
     "cities": [
         {
             "name": "Hawaii, USA",
-            "latitude": 19.8987,
-            "longitude": 155.6659
+            "latitude": 19.56191,
+            "longitude": -155.45056
         },
         {
             "name": "Hawarden, UK",
-            "latitude": 53.1857,
-            "longitude": 3.0298
+            "latitude": 53.18575,
+            "longitude": -3.02996
         },
         {
             "name": "Hawes, UK",
-            "latitude": 54.3038,
-            "longitude": 2.1969
+            "latitude": 54.30340,
+            "longitude": -2.19528
         },
         {
             "name": "Hawkwood, Canada",
-            "latitude": 51.1323,
-            "longitude": 114.1775
+            "latitude": 51.13234,
+            "longitude": -114.17759
         },
         {
             "name": "Hawthorne, CA, USA",
-            "latitude": 33.9164,
-            "longitude": 118.3526
+            "latitude": 33.91629,
+            "longitude": -118.35233
         },
         {
             "name": "Nom Pen, Cambodia",
@@ -49,6 +49,31 @@
             "name": "Nomós Achaḯas, Greece",
             "latitude": 37.95024,
             "longitude": 21.76175
+        },
+        {
+            "name": "Taraba, Nigeria",
+            "latitude": 7.85487,
+            "longitude": 10.96807
+        },
+        {
+            "name": "Taranto, Italy",
+            "latitude": 40.46545,
+            "longitude": 17.24484
+        },
+        {
+            "name": "Taraz, Kazakhstan",
+            "latitude": 42.89991,
+            "longitude": 71.40010
+        },
+        {
+            "name": "Tarsus, Turkey",
+            "latitude": 36.91618,
+            "longitude": 34.89441
+        },
+        {
+            "name": "Tartu, Estonia",
+            "latitude": 58.37855,
+            "longitude": 26.72911
         }
     ]
 }
