@@ -2,7 +2,7 @@
 A webpage taking some user inputs and show a result with a map
 
 ## Live Link
-Hosted in Netlify -> [Live Link](https://tubular-melomakarona-fd7490.netlify.app/)
+Hosted in Netlify -> [Live Link](https://vocal-cajeta-020681.netlify.app/)
 
 ## Features
 * navbar containing some input fields and button
