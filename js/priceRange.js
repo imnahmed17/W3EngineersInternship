@@ -8,7 +8,7 @@ let min = 0;
 let max = 0;
 
 noUiSlider.create(slider, {
-    start: [0, 7749],
+    start: [0, 5749],
     connect: true,
     range: {
         'min': 0,

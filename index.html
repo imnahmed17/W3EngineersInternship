@@ -63,9 +63,9 @@
         <!-- price range -->
         <div class="px-2 w-full md:w-[40%] lg:w-[22%] hidden absolute top-[213px] md:top-14 md:left-[51.4%] md:right-[51.4%] lg:left-[56.8%] lg:right-[56.8%]" id="priceRangeDiv">
             <div class="px-6 pt-3 pb-2 bg-white border">
-                <p>Price Range: <span class="text-yellow-400"><i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>7749+ per night</span></p>
+                <p>Price Range: <span class="text-yellow-400"><i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>5749+ per night</span></p>
                 <div class="pt-14 px-4">
-                    <div id="slider"></div>
+                    <div id="slider" class="w-[95%]"></div>
                 </div>
                 <div class="mt-8 flex justify-end">
                     <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn1">Apply</button>
@@ -73,14 +73,14 @@
             </div>
         </div>
         <!-- search result  -->
-        <div class="px-2 py-4" id="resultDiv">
+        <div class="px-2 py-4 hidden" id="resultDiv">
             
         </div>
     </section>
     <section>
         <div class="px-2">
-            <div id="map" class="px-2 border"></div>
-            <button id="showMapBtn" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-orange-400 text-white py-2 px-4 rounded">Show Map</button>
+            <div id="map" class="px-2"></div>
+            <button id="showMapBtn" class="fixed bottom-7 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-4 rounded-full flex items-center gap-2">Show Map <i class="fi fi-rr-map flex items-center"></i></button>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>

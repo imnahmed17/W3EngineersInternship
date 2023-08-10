@@ -1,6 +1,76 @@
 {
     "cities": [
         {
+            "name": "Ashbourne, Ireland",
+            "latitude": 53.51462,
+            "longitude": -6.40327
+        },
+        {
+            "name": "Asheboro, USA",
+            "latitude": 35.70837,
+            "longitude": -79.81550
+        },
+        {
+            "name": "Ashford, UK",
+            "latitude": 51.14535,
+            "longitude": 0.87506
+        },
+        {
+            "name": "Ashikaga, Japan",
+            "latitude": 36.35120,
+            "longitude": 139.48648
+        },
+        {
+            "name": "Ashland, USA",
+            "latitude": 42.19479,
+            "longitude": -122.70879
+        },
+        {
+            "name": "Fahai, China",
+            "latitude": 39.94115,
+            "longitude": 116.15980
+        },
+        {
+            "name": "Fahraj, Iran",
+            "latitude": 28.94627,
+            "longitude": 58.88524
+        },
+        {
+            "name": "Fahs, Tunisia",
+            "latitude": 36.37869,
+            "longitude": 9.91070
+        },
+        {
+            "name": "Fahud, Oman",
+            "latitude": 22.32725,
+            "longitude": 56.50539
+        },
+        {
+            "name": "Habach, Germany",
+            "latitude": 47.72850,
+            "longitude": 11.27973
+        },
+        {
+            "name": "Habiganj, Bangladesh",
+            "latitude": 24.39061,
+            "longitude": 91.41200
+        },
+        {
+            "name": "Habikino, Japan",
+            "latitude": 34.54942,
+            "longitude": 135.60669
+        },
+        {
+            "name": "Habo, Sweden",
+            "latitude": 57.90934,
+            "longitude": 14.07483
+        },
+        {
+            "name": "Habur, Turkey",
+            "latitude": 37.14523,
+            "longitude": 42.65350
+        },
+        {
             "name": "Hawaii, USA",
             "latitude": 19.56191,
             "longitude": -155.45056
