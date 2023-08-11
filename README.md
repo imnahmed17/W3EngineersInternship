@@ -1,3 +1,4 @@
+
 # Task 01
 A webpage containing navbar and some room cards
 
@@ -13,4 +14,14 @@ Hosted in Netlify -> [BedroomVillas](https://tubular-melomakarona-fd7490.netlify
 ## Resources & Credits
 CSS Framework -> [tailwindcss](https://tailwindcss.com/docs/guides/vite)
 
+Icon -> [flaticon](https://www.flaticon.com)
+
+Calender -> [Pikaday](https://github.com/Pikaday/Pikaday)
+
+Range Slider -> [noUiSlider - cdn](https://cdnjs.com/libraries/noUiSlider)
+
+Range Slider -> [noUiSlider - documentation](https://refreshless.com/nouislider)
+
+Map -> [leafletjs](https://leafletjs.com/download.html)
+=======
 Icon -> [flaticon](https://www.flaticon.com)

@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
@@ -11,9 +18,91 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Task 01</title>
+    <title>Task 01+02</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="max-w-7xl mx-auto">
+    <section class="my-3">
+        <div class="px-2 flex flex-col md:flex-row gap-1">
+            <div class="md:w-3/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
+                <i class="fi fi-rr-search flex items-center text-slate-400"></i>
+                <input type="text" name="search" id="search" placeholder="Texas, USA" class="ml-2 w-full outline-none" autocomplete="off">
+            </div>
+            <div class="md:w-4/12 h-12 px-1 py-2 flex gap-1 border-2 focus-within:border-blue-400">
+                <i class="fi fi-rs-calendar flex items-center text-cyan-500"></i>
+                <input type="text" name="checkIn" id="checkIn" placeholder="Check In" class="ml-3 w-5/12 outline-none" autocomplete="off">
+                <i class="fi fi-rr-angle-right mx-1 md:mx-5 flex items-center text-slate-400"></i>
+                <input type="text" name="checkOut" id="checkOut" placeholder="Check Out" class="w-5/12 outline-none" autocomplete="off">
+            </div>
+            <div class="md:w-2/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
+                <i class="fi fi-rs-users flex items-center text-slate-400"></i>
+                <input type="text" name="guests" id="guests" placeholder="Guests" class="ml-2 w-full outline-none" autocomplete="off">
+                <i class="fi fi-rr-angle-down flex items-center text-slate-400" id="downArrow1"></i>
+            </div>
+            <div class="md:w-2/12 h-12 px-1 py-2 flex border-2 focus-within:border-blue-400">
+                <input type="text" name="priceRange" id="priceRange" placeholder="Price Range" class="w-full outline-none" autocomplete="off">
+                <i class="fi fi-rr-angle-down flex items-center text-slate-400" id="downArrow2"></i>
+            </div>
+            <button class="bg-orange-400 text-white px-2 md:w-1/12 h-12" id="searchBtn">Search</button>
+        </div>
+        <!-- city list -->
+        <div class="px-2 w-full absolute top-14">
+            <ul id="cityList" class="mt-0 w-full md:w-[24.5%] lg:w-[17%] bg-white border hidden">
+        
+            </ul>
+        </div>
+        <!-- guest count -->
+        <div class="px-2 w-full md:w-[30%] lg:w-[18%] hidden absolute top-40 md:top-14 md:left-[45%] md:right-[45%] lg:left-[49.3%] lg:right-[49.3%]" id="guestDiv">
+            <div class="px-3 pt-6 pb-2 bg-white border">
+                <div class="flex justify-between items-center">
+                    <h3>Guests</h3>
+                    <button class="text-orange-400 rounded-full border-2 border-orange-400 h-10 w-10 text-2xl" id="minusBtn">
+                        <i class="fi fi-rs-minus-small flex justify-center items-start"></i>
+                    </button>
+                    <h3 id="textValue"></h3>
+                    <button class="text-orange-400 rounded-full border-2 border-orange-400 h-10 w-10 text-2xl" id="plusBtn">
+                        <i class="fi fi-rs-plus-small flex justify-center items-start"></i>
+                    </button>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn">Apply</button>
+                </div>
+            </div>
+        </div>
+        <!-- price range -->
+        <div class="px-2 w-full md:w-[40%] lg:w-[22%] hidden absolute top-[213px] md:top-14 md:left-[51.4%] md:right-[51.4%] lg:left-[56.8%] lg:right-[56.8%]" id="priceRangeDiv">
+            <div class="px-6 pt-3 pb-2 bg-white border">
+                <p>Price Range: <span class="text-yellow-400"><i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>0 - <i class="fi fi-rs-bangladeshi-taka-sign" style="font-size: 14px;"></i>5749+ per night</span></p>
+                <div class="pt-14 px-4">
+                    <div id="slider" class="w-[95%]"></div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                    <button class="bg-orange-400 text-white px-4 h-9 rounded" id="applyBtn1">Apply</button>
+                </div>
+            </div>
+        </div>
+        <!-- search result  -->
+        <div class="px-2 py-4 hidden" id="resultDiv">
+            
+        </div>
+    </section>
+    <section>
+        <div class="px-2">
+            <div id="map" class="px-2"></div>
+            <button id="showMapBtn" class="fixed bottom-7 left-1/2 transform -translate-x-1/2 bg-black text-white py-2 px-4 rounded-full flex items-center gap-2">Show Map <i class="fi fi-rr-map flex items-center"></i></button>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js" integrity="sha512-UOJe4paV6hYWBnS0c9GnIRH8PLm2nFK22uhfAvsTIqd3uwnWsVri1OPn5fJYdLtGY3wB11LGHJ4yPU1WFJeBYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/searchCity.js"></script>
+    <script src="js/selectDate.js"></script>
+    <script src="js/guestCount.js"></script>
+    <script src="js/priceRange.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/showMap.js"></script>
+
+
     <!-- navbar -->
     <header>
         <nav class="px-4 flex flex-col lg:flex-row justify-between items-center relative">
@@ -433,5 +522,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

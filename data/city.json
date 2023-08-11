@@ -1,0 +1,149 @@
+{
+    "cities": [
+        {
+            "name": "Ashbourne, Ireland",
+            "latitude": 53.51462,
+            "longitude": -6.40327
+        },
+        {
+            "name": "Asheboro, USA",
+            "latitude": 35.70837,
+            "longitude": -79.81550
+        },
+        {
+            "name": "Ashford, UK",
+            "latitude": 51.14535,
+            "longitude": 0.87506
+        },
+        {
+            "name": "Ashikaga, Japan",
+            "latitude": 36.35120,
+            "longitude": 139.48648
+        },
+        {
+            "name": "Ashland, USA",
+            "latitude": 42.19479,
+            "longitude": -122.70879
+        },
+        {
+            "name": "Fahai, China",
+            "latitude": 39.94115,
+            "longitude": 116.15980
+        },
+        {
+            "name": "Fahraj, Iran",
+            "latitude": 28.94627,
+            "longitude": 58.88524
+        },
+        {
+            "name": "Fahs, Tunisia",
+            "latitude": 36.37869,
+            "longitude": 9.91070
+        },
+        {
+            "name": "Fahud, Oman",
+            "latitude": 22.32725,
+            "longitude": 56.50539
+        },
+        {
+            "name": "Habach, Germany",
+            "latitude": 47.72850,
+            "longitude": 11.27973
+        },
+        {
+            "name": "Habiganj, Bangladesh",
+            "latitude": 24.39061,
+            "longitude": 91.41200
+        },
+        {
+            "name": "Habikino, Japan",
+            "latitude": 34.54942,
+            "longitude": 135.60669
+        },
+        {
+            "name": "Habo, Sweden",
+            "latitude": 57.90934,
+            "longitude": 14.07483
+        },
+        {
+            "name": "Habur, Turkey",
+            "latitude": 37.14523,
+            "longitude": 42.65350
+        },
+        {
+            "name": "Hawaii, USA",
+            "latitude": 19.56191,
+            "longitude": -155.45056
+        },
+        {
+            "name": "Hawarden, UK",
+            "latitude": 53.18575,
+            "longitude": -3.02996
+        },
+        {
+            "name": "Hawes, UK",
+            "latitude": 54.30340,
+            "longitude": -2.19528
+        },
+        {
+            "name": "Hawkwood, Canada",
+            "latitude": 51.13234,
+            "longitude": -114.17759
+        },
+        {
+            "name": "Hawthorne, CA, USA",
+            "latitude": 33.91629,
+            "longitude": -118.35233
+        },
+        {
+            "name": "Nom Pen, Cambodia",
+            "latitude": 11.55784,
+            "longitude": 104.90735
+        },
+        {
+            "name": "Nombela, Spain",
+            "latitude": 40.15635,
+            "longitude": -4.50338
+        },
+        {
+            "name": "Nome, USA",
+            "latitude": 64.50026,
+            "longitude": -165.40635
+        },
+        {
+            "name": "Nomi, Japan",
+            "latitude": 36.43780,
+            "longitude": 136.54483
+        },
+        {
+            "name": "Nomós Achaḯas, Greece",
+            "latitude": 37.95024,
+            "longitude": 21.76175
+        },
+        {
+            "name": "Taraba, Nigeria",
+            "latitude": 7.85487,
+            "longitude": 10.96807
+        },
+        {
+            "name": "Taranto, Italy",
+            "latitude": 40.46545,
+            "longitude": 17.24484
+        },
+        {
+            "name": "Taraz, Kazakhstan",
+            "latitude": 42.89991,
+            "longitude": 71.40010
+        },
+        {
+            "name": "Tarsus, Turkey",
+            "latitude": 36.91618,
+            "longitude": 34.89441
+        },
+        {
+            "name": "Tartu, Estonia",
+            "latitude": 58.37855,
+            "longitude": 26.72911
+        }
+    ]
+}
