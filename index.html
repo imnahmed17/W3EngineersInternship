@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.css" integrity="sha512-MKxcSu/LDtbIYHBNAWUQwfB3iVoG9xeMCm32QV5hZ/9lFaQZJVaXfz9aFa0IZExWzCpm7OWvp9zq9gVip/nLMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Task 01+02</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Task 02</title>
 </head>
 <body class="max-w-7xl mx-auto">
     <section class="my-3">
@@ -92,5 +101,427 @@
     <script src="js/priceRange.js"></script>
     <script src="js/common.js"></script>
     <script src="js/showMap.js"></script>
+
+
+    <!-- navbar -->
+    <header>
+        <nav class="px-4 flex flex-col lg:flex-row justify-between items-center relative">
+            <!-- menu bar and logo -->
+            <div class="py-3 w-full lg:w-fit flex flex-row-reverse lg:flex-row justify-between gap-3">
+                <div class="group h-10">
+                    <a class="flex items-center">
+                        <i class="fi fi-br-menu-burger text-4xl flex items-center"></i>
+                    </a>
+                    <div class="w-full lg:w-1/4 absolute top-14 left-0 md:left-2 z-10 invisible group-hover:visible">
+                        <ul class="bg-slate-100 list-none text-slate-500">
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">Home</li>
+                            <hr>
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">Bookmarked</li>
+                            <hr>
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">List Your Property</li>
+                            <hr>
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">About</li>
+                            <hr>
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">FAQ</li>
+                            <hr>
+                            <li class="ml-4 h-10 flex items-center hover:text-sky-400">Blog</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex gap-2">
+                    <i class="fi fi-ss-leaf text-yellow-300 text-4xl flex items-center cursor-text"></i>
+                    <p class="text-4xl">
+                        <span class="text-blue-500">Bedroom</span><span class="text-yellow-400">Villas</span>
+                    </p>
+                </div>
+            </div>
+            <!-- menu inputs -->
+            <div class="bg-blue-400 lg:bg-inherit py-2 px-2 lg:px-0 w-full lg:w-fit flex justify-between lg:justify-end gap-1">
+                <div class="relative flex items-center w-1/5 lg:w-fit">
+                    <i class="fi fi-br-search absolute left-2 flex items-center text-slate-400 hidden md:block"></i>
+                    <input class="border-2 py-2 pl-1 md:pl-8 w-full" type="text" placeholder="Arizona, USA">
+                </div>
+                <div class="flex gap-0 w-2/5 lg:w-fit">
+                    <div class="relative flex items-center w-1/2">
+                        <i class="fi fi-rs-calendar absolute left-2 flex items-center text-sky-500 hidden md:block"></i>
+                        <input class="border-2 py-2 pl-1 md:pl-8 w-full" type="text" placeholder="Check In">
+                    </div>
+                    <div class="relative flex items-center w-1/2">
+                        <i class="fi fi-rs-calendar absolute left-2 flex items-center text-sky-500 hidden md:block"></i>
+                        <input class="border-2 py-2 pl-1 md:pl-8 w-full" type="text" placeholder="Check Out">
+                    </div>
+                </div>
+                <div class="w-1/5 lg:w-fit">
+                    <button class="bg-amber-600 p-2 text-white w-full h-full">Search</button>
+                </div>
+                <div class="w-1/5 lg:w-fit">
+                    <button class="bg-blue-900 p-2 text-white w-full h-full">Filters</button>
+                </div>
+            </div>
+        </nav>
+        <hr>
+        <div class="my-3 flex">
+            <p class="px-4">Vacation Rentals in Arizona</p>
+            <div class="text-orange-800 flex gap-2">
+                <p>| USA</p>
+                <i class="fi fi-br-angle-right flex items-center"></i>
+                <p>Arizona</p>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <div class="bg-slate-200 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+            <!-- 1st card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img1.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-18">
+                    <h3 class="text-xl font-bold">Gorgeous Courtyard Resort! Heated Pool, Hot Tub, Putting Green!</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+            <!-- 2nd card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img4.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-14">
+                    <h3 class="text-xl font-bold">Simply Amazing</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+            <!-- 3rd card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img3.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-14">
+                    <h3 class="text-xl font-bold">Best Western Inn of Payson</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+            <!-- 4th card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img2.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-14">
+                    <h3 class="text-xl font-bold">Modern cabin with views of the red rocks</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+            <!-- 5th card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img5.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-14">
+                    <h3 class="text-xl font-bold">Spacious new guest house in the pines (sunshine and trails)</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+            <!-- 6th card -->
+            <div class="p-4" style="background-color: white;">
+                <div class="relative">
+                    <img src="./images/img6.jpg" class="w-full h-56" alt="">
+                    <div class="absolute top-2 right-2 bg-slate-100 p-2 rounded-md flex items-center gap-3">
+                        <p>More Photos</p>
+                        <i class="fi fi-rr-arrow-up-right-from-square flex items-center"></i>
+                    </div>
+                    <div class="absolute bottom-2 left-2 bg-slate-100 p-2 rounded-md flex items-center gap-1">
+                        <p>From</p>
+                        <i class="fi fi-br-bangladeshi-taka-sign flex items-center"></i>
+                        <p>9,181</p>
+                    </div>
+                    <div class="absolute bottom-2 right-2 flex justify-between gap-2">
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-rs-heart text-white text-2xl flex items-center"></i>
+                        </div>
+                        <div class="bg-black/50 p-2 rounded-md">
+                            <i class="fi fi-sr-marker text-white text-2xl flex items-center"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2 h-14">
+                    <h3 class="text-xl font-bold">Stunning Red Rocks; W. Sedona, Walk to trls! 1 bd!</h3>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <div class="flex gap-2">
+                            <div>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-ss-star text-blue-500"></i>
+                                <i class="fi fi-rs-star text-blue-500"></i>
+                            </div>
+                            <p>683 Reviews</p>
+                        </div>
+                        <p>Sleeps 85</p>
+                        <p class="text-blue-500 text-sm">Arizona > Sun City West</p>
+                    </div>
+                    <div>
+                        <button class="bg-amber-600 p-2 text-white rounded-md flex-end">View Details</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-between">
+                    <div class="flex gap-2">
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>View</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <i class="fi fi-sr-check flex items-center"></i>
+                            <p>Child Friendly</p>
+                        </div>
+                    </div>
+                    <p>BC-367639</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
